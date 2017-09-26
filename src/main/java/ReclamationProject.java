@@ -20,9 +20,9 @@ public class ReclamationProject {
     * @return the string
     */
     static String doit(final String a, final String b) {
+        String aTwo = a;
+        String bTwo = b;
         if (a.length() > b.length()) {
-            String aTwo = a;
-            String bTwo = b;
             String c = a;
             aTwo = b; bTwo = c;
             }
@@ -31,10 +31,10 @@ public class ReclamationProject {
         /*
          * For loop with i
          */
-        for (int i = 0; i < a.length();) {
-            for (int j = a.length() - i; j > 0; j--) {
-                for (int k = 0; k < b.length() - j; k++) {
-                   if (a.regionMatches(i, b, k, j) && j > r.length()) {
+        for (int i = 0; i < aTwo.length();) {
+            for (int j = aTwo.length() - i; j > 0; j--) {
+                for (int k = 0; k < bTwo.length() - j; k++) {
+                   if (aTwo.regionMatches(i, b, k, j) && j > r.length()) {
                             r = a.substring(i, i + j);
                         }
                 }
